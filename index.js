@@ -4,6 +4,9 @@ const express = require('express') // 익스프레스 모듈을 가져온다
 const app = express()   // 이 펑션을 이용해 새로운 express 앱을 만든다 
 const port = 3000 // 백서버 
 const bodyParser = require('body-parser');
+
+const config = require('./config/key');
+
 const { User } = require("./models/User");
 
 //application/x-www-form-urlencoded  (서버에서 )
@@ -25,7 +28,7 @@ mongoose.connect('mongodb+srv://heejinshin:abcd1234@boilerplate.6xrm8nv.mongodb.
 // 라우터 생성 
 
 app.get('/', (req, res) =>  // 루트디렉토리 
-  res.send('Hello World! 안녕하세요~ test!')     // 브라우저 창에 띄움 
+  res.send('hello World! happy new year!')     // 브라우저 창에 띄움 
 
 )
 
